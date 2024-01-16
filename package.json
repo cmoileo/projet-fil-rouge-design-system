@@ -1,6 +1,6 @@
 {
-  "name": "@cmoileo/projet-fil-rouge-design-system",
-  "version": "0.0.2",
+  "name": "projet-fil-rouge-design-system",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -15,15 +15,15 @@
     "rollup-plugin-dts": "^6.1.0",
     "typescript": "^5.3.3"
   },
-  "main": "dist/cjs/indexd/ts",
-  "module": "dist/esm/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "type": "module",
   "files": [
     "dist"
   ],
-  "types": "dist/types/index.d.ts",
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://npm.pkg.github.com/cmoileo"
-    }
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/cmoileo"
+  }
 }
