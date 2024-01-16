@@ -1,6 +1,6 @@
 {
-  "name": "react-component-lib",
-  "version": "0.0.1",
+  "name": "@cmoileo/projet-fil-rouge-design-system",
+  "version": "0.0.2",
   "license": "MIT",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs"
@@ -21,5 +21,9 @@
   "files": [
     "dist"
   ],
-  "types": "dist/types/index.d.ts"
+  "types": "dist/types/index.d.ts",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://npm.pkg.github.com/cmoileo"
+    }
 }
