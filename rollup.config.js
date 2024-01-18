@@ -2,6 +2,8 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
+import css from "rollup-plugin-import-css";
+import scss from "rollup-plugin-scss";
 
 const packageJson = require("./package.json");
 
@@ -23,6 +25,11 @@ export default [
         plugins: [
             resolve(),
             commonjs(),
+            css(),
+            scss({
+                output: "./build/css/style.css",
+                failOnError: true,
+            }),
             typescript({ tsconfig: "./tsconfig.json" }),
         ],
     },
