@@ -131,3 +131,103 @@ $mobile_radius_700: 1.375rem;
 $mobile_radius_800: 1.625rem;
 $mobile_radius_900: 2rem;
 $mobile_radius_1000: 2.875rem;
+$typo_size_0: 10px;
+$typo_size_1: 12px;
+$typo_size_2: 14px;
+$typo_size_3: 16px;
+$typo_size_4: 18px;
+$typo_size_5: 20px;
+$typo_size_6: 24px;
+$typo_size_7: 28px;
+$typo_size_8: 32px;
+$typo_size_9: 36px;
+$typo_size_10: 40px;
+$typo_family_josefin-sans: Josefin Sans;
+$typo_family_roboto: Roboto;
+$typo_line_0: AUTO;
+$typo_weight_josefin-sans-0: Bold;
+$typo_weight_josefin-sans-1: SemiBold;
+$typo_weight_josefin-sans-2: Medium;
+$typo_weight_josefin-sans-3: Regular;
+$typo_weight_roboto-4: Medium;
+$typo_weight_roboto-5: Regular;
+$typo_weight_roboto-6: Light;
+$typo_letter_0: 0%;
+$typo_para_0: 0;
+.paragraph_XL {
+font-family: $typo_family_roboto;
+font-weight: $typo_weight_roboto-4;
+font-size: $typo_size_4;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.paragraph_L {
+font-family: $typo_family_roboto;
+font-weight: $typo_weight_roboto-4;
+font-size: $typo_size_3;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.paragraph_M {
+font-family: $typo_family_roboto;
+font-weight: $typo_weight_roboto-5;
+font-size: $typo_size_2;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.paragraph_S {
+font-family: $typo_family_roboto;
+font-weight: $typo_weight_roboto-5;
+font-size: $typo_size_1;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.paragraph_XS {
+font-family: $typo_family_roboto;
+font-weight: $typo_weight_roboto-6;
+font-size: $typo_size_0;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H1 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-0;
+font-size: $typo_size_10;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H2 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-0;
+font-size: $typo_size_9;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H3 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-1;
+font-size: $typo_size_8;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H4 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-2;
+font-size: $typo_size_7;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H5 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-3;
+font-size: $typo_size_6;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};
+.heading_H6 {
+font-family: $typo_family_josefin-sans;
+font-weight: $typo_weight_josefin-sans-3;
+font-size: $typo_size_5;
+line-height: $typo_line_0;
+letter-spacing: $typo_letter_0;
+};

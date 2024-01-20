@@ -86,6 +86,89 @@ const tokensToScss = (tokens) => {
         scss += `$mobile_${border}: ${mobileBorderRadius[border].value};\n`
     })
 
+    const typos = tokens['Typos']
+    const fontSizes = typos['fontSize']
+
+    Object.keys(fontSizes).map((size) => {
+        scss += `$typo_size_${size}: ${fontSizes[size].value}px;\n`
+    })
+
+    const fontFamily = typos['fontFamilies']
+
+    Object.keys(fontFamily).map((family) => {
+        scss += `$typo_family_${family}: ${fontFamily[family].value};\n`
+    })
+
+    const lineHeight = typos['lineHeights']
+
+    Object.keys(lineHeight).map((line) => {
+        scss += `$typo_line_${line}: ${lineHeight[line].value};\n`
+    })
+
+    const fontWeight = typos['fontWeights']
+
+    Object.keys(fontWeight).map((weight) => {
+        scss += `$typo_weight_${weight}: ${fontWeight[weight].value};\n`
+    })
+
+    const letterSpacing = typos['letterSpacing']
+
+    Object.keys(letterSpacing).map((letter) => {
+        scss += `$typo_letter_${letter}: ${letterSpacing[letter].value};\n`
+    })
+
+    const paragraphSpacing = typos['paragraphSpacing']
+
+    Object.keys(paragraphSpacing).map((para) => {
+        scss += `$typo_para_${para}: ${paragraphSpacing[para].value};\n`
+    })
+
+    const paragraphs = typos['Paragraphs']
+
+    Object.keys(paragraphs).map((para) => {
+        const typoName = para
+        const typoValue = paragraphs[para].value
+        const typoFontFamily = `typo_family_${typoValue['fontFamily'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoFontWeight = `typo_weight_${typoValue['fontWeight'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoLineHeight = `typo_line_${typoValue['lineHeight'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoSize = `typo_size_${typoValue['fontSize'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoLetterSpacing = `typo_letter_${typoValue['letterSpacing'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoParagraphSpacing = `typo_para_${typoValue['paragraphSpacing'].replace(/[{}]/g, '').split('.')[1]}`
+
+        scss += `.${typoName} {
+font-family: $${typoFontFamily};
+font-weight: $${typoFontWeight};
+font-size: $${typoSize};
+line-height: $${typoLineHeight};
+letter-spacing: $${typoLetterSpacing};
+};\n`
+
+        console.log(typoValue)
+    })
+
+    const headings = typos['Headings']
+
+    Object.keys(headings).map((heading) => {
+        const typoName = heading
+        const typoValue = headings[heading].value
+        const typoFontFamily = `typo_family_${typoValue['fontFamily'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoFontWeight = `typo_weight_${typoValue['fontWeight'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoLineHeight = `typo_line_${typoValue['lineHeight'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoSize = `typo_size_${typoValue['fontSize'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoLetterSpacing = `typo_letter_${typoValue['letterSpacing'].replace(/[{}]/g, '').split('.')[1]}`
+        const typoParagraphSpacing = `typo_para_${typoValue['paragraphSpacing'].replace(/[{}]/g, '').split('.')[1]}`
+
+        scss += `.${typoName} {
+font-family: $${typoFontFamily};
+font-weight: $${typoFontWeight};
+font-size: $${typoSize};
+line-height: $${typoLineHeight};
+letter-spacing: $${typoLetterSpacing};
+};\n`
+    })
+
+
+
     fs.writeFileSync('./variables.scss', scss);
 };
 
