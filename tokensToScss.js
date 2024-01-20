@@ -9,24 +9,36 @@ const tokensToScss = (tokens) => {
 
     Object.keys(purples).map((purple) => {
         scss += `$${purple}: ${purples[purple].value};\n`
+        scss += `.${purple} {
+color: $${purple};
+};\n`
     })
 
     const blues = tokens['Colors/Mode 1']['Blues']
 
     Object.keys(blues).map((blue) => {
         scss += `$${blue}: ${blues[blue].value};\n`
+        scss += `.${blue} {
+color: $${blue};
+};\n`
     })
 
     const greens = tokens['Colors/Mode 1']['Greens']
 
     Object.keys(greens).map((green) => {
         scss += `$${green}: ${greens[green].value};\n`
+        scss += `.${green} {
+color: $${green};
+};\n`
     })
 
     const greys = tokens['Colors/Mode 1']['Greys']
 
     Object.keys(greys).map((grey) => {
         scss += `$${grey}: ${greys[grey].value};\n`
+        scss += `.${grey} {
+color: $${grey};
+};\n`
     })
 
     const desktopSpacing = tokens['Spacing/Desktop']
@@ -34,18 +46,27 @@ const tokensToScss = (tokens) => {
 
     Object.keys(padding).map((pad) => {
         scss += `$desktop_${pad}: ${padding[pad].value};\n`
+        scss += `.desktop_${pad} {
+padding: $desktop_${pad};
+};\n`
     })
 
     const margin = desktopSpacing['Margin']
 
     Object.keys(margin).map((marg) => {
         scss += `$desktop_${marg}: ${margin[marg].value};\n`
+        scss += `.desktop_${marg} {
+margin: $desktop_${marg};
+};\n`
     })
 
     const borderRadius = desktopSpacing['Borders']
 
     Object.keys(borderRadius).map((border) => {
         scss += `$desktop_${border}: ${borderRadius[border].value};\n`
+        scss += `.desktop_${border} {
+border-radius: $desktop_${border};
+};\n`
     })
 
     const tabletSpacing = tokens['Spacing/Tablet']
@@ -53,18 +74,27 @@ const tokensToScss = (tokens) => {
 
     Object.keys(tabletPadding).map((pad) => {
         scss += `$tablet_${pad}: ${tabletPadding[pad].value};\n`
+        scss += `.tablet_${pad} {
+padding: $tablet_${pad};
+};\n`
     })
 
     const tabletMargin = tabletSpacing['Margin']
 
     Object.keys(tabletMargin).map((marg) => {
         scss += `$tablet_${marg}: ${tabletMargin[marg].value};\n`
+        scss += `.tablet_${marg} {
+margin: $tablet_${marg};
+};\n`
     })
 
     const tabletBorderRadius = tabletSpacing['Borders']
 
     Object.keys(tabletBorderRadius).map((border) => {
         scss += `$tablet_${border}: ${tabletBorderRadius[border].value};\n`
+        scss += `.tablet_${border} {
+border-radius: $tablet_${border};
+};\n`
     })
 
     const mobileSpacing = tokens['Spacing/Mobile']
@@ -72,18 +102,27 @@ const tokensToScss = (tokens) => {
 
     Object.keys(mobilePadding).map((pad) => {
         scss += `$mobile_${pad}: ${mobilePadding[pad].value};\n`
+        scss += `.mobile_${pad} {
+padding: $mobile_${pad};
+};\n`
     })
 
     const mobileMargin = mobileSpacing['Margin']
 
     Object.keys(mobileMargin).map((marg) => {
         scss += `$mobile_${marg}: ${mobileMargin[marg].value};\n`
+        scss += `.mobile_${marg} {
+margin: $mobile_${marg};
+};\n`
     })
 
     const mobileBorderRadius = mobileSpacing['Borders']
 
     Object.keys(mobileBorderRadius).map((border) => {
         scss += `$mobile_${border}: ${mobileBorderRadius[border].value};\n`
+        scss += `.mobile_${border} {
+border-radius: $mobile_${border};
+};\n`
     })
 
     const typos = tokens['Typos']
@@ -142,8 +181,6 @@ font-size: $${typoSize};
 line-height: $${typoLineHeight};
 letter-spacing: $${typoLetterSpacing};
 };\n`
-
-        console.log(typoValue)
     })
 
     const headings = typos['Headings']
