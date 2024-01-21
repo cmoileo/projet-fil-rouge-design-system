@@ -1,20 +1,16 @@
 import React from "react";
-import "./Button.scss";
+import "../../../variables.scss"
+import "../../../utils.scss"
 import PropTypes from "prop-types";
 
 export interface argsTypes {
     label: string;
-    color?: string;
-    radius?: string;
-    className?: string;
+    style?: string;
     handleClick?: () => void;
 }
 
 const Button = (props: argsTypes) => {
-    const style = {
-        backgroundColor: props.color,
-        borderRadius: props.radius
-    };
+    const style = props.style ? props.style : "";
 
     const handleClick = () => {
         if (props.handleClick) {
@@ -26,8 +22,7 @@ const Button = (props: argsTypes) => {
         <button
             type="submit"
             onClick={handleClick}
-            style={style}
-            className="main-button"
+            className={style}
         >
             {props.label}
         </button>
@@ -36,8 +31,7 @@ const Button = (props: argsTypes) => {
 
 Button.propTypes = {
     label: PropTypes.string.isRequired,
-    color: PropTypes.string,
-    radius: PropTypes.string,
+    style: PropTypes.string,
     handleClick: PropTypes.func
 }
 

@@ -13,6 +13,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     primary: true,
     label: 'Button test',
-    radius: '5px',
+    style: 'desktop_radius_full border_none blue_900 desktop_padding_400'
 }
 
