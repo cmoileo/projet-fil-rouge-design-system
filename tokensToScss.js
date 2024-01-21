@@ -12,6 +12,9 @@ const tokensToScss = (tokens) => {
         scss += `.${purple} {
 color: $${purple};
 };\n`
+        scss += `.${purple}_bg {
+background-color: $${purple};
+};\n`
     })
 
     const blues = tokens['Colors/Mode 1']['Blues']
@@ -20,6 +23,9 @@ color: $${purple};
         scss += `$${blue}: ${blues[blue].value};\n`
         scss += `.${blue} {
 color: $${blue};
+};\n`
+        scss += `.${blue}_bg {
+background-color: $${blue};
 };\n`
     })
 
@@ -30,6 +36,9 @@ color: $${blue};
         scss += `.${green} {
 color: $${green};
 };\n`
+        scss += `.${green}_bg {
+background-color: $${green};
+};\n`
     })
 
     const greys = tokens['Colors/Mode 1']['Greys']
@@ -38,6 +47,9 @@ color: $${green};
         scss += `$${grey}: ${greys[grey].value};\n`
         scss += `.${grey} {
 color: $${grey};
+};\n`
+        scss += `.${grey}_bg {
+background-color: $${grey};
 };\n`
     })
 
@@ -48,6 +60,18 @@ color: $${grey};
         scss += `$desktop_${pad}: ${padding[pad].value};\n`
         scss += `.desktop_${pad} {
 padding: $desktop_${pad};
+};\n`
+        scss += `.desktop_${pad}_right {
+padding-right: $desktop_${pad};
+};\n`
+        scss += `.desktop_${pad}_left {
+padding-left: $desktop_${pad};
+};\n`
+        scss += `.desktop_${pad}_top {
+padding-top: $desktop_${pad};
+};\n`
+        scss += `.desktop_${pad}_bottom {
+padding-bottom: $desktop_${pad};
 };\n`
     })
 
@@ -77,6 +101,18 @@ border-radius: $desktop_${border};
         scss += `.tablet_${pad} {
 padding: $tablet_${pad};
 };\n`
+        scss += `.tablet_${pad}_right {
+padding-right: $tablet_${pad};
+};\n`
+        scss += `.tablet_${pad}_left {
+padding-left: $tablet_${pad};
+};\n`
+        scss += `.tablet_${pad}_top {
+padding-top: $tablet_${pad};
+};\n`
+        scss += `.tablet_${pad}_bottom {
+padding-bottom: $tablet_${pad};
+};\n`
     })
 
     const tabletMargin = tabletSpacing['Margin']
@@ -105,6 +141,18 @@ border-radius: $tablet_${border};
         scss += `.mobile_${pad} {
 padding: $mobile_${pad};
 };\n`
+        scss += `.mobile_${pad}_right {
+padding-right: $mobile_${pad};
+};\n`
+        scss += `.mobile_${pad}_left {
+padding-left: $mobile_${pad};
+};\n`
+        scss += `.mobile_${pad}_top {
+padding-top: $mobile_${pad};
+};\n`
+        scss += `.mobile_${pad}_bottom {
+padding-bottom: $mobile_${pad};
+};\n`
     })
 
     const mobileMargin = mobileSpacing['Margin']
@@ -113,6 +161,18 @@ padding: $mobile_${pad};
         scss += `$mobile_${marg}: ${mobileMargin[marg].value};\n`
         scss += `.mobile_${marg} {
 margin: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_right {
+margin-right: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_left {
+margin-left: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_top {
+margin-top: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_bottom {
+margin-bottom: $mobile_${marg};
 };\n`
     })
 
