@@ -3,10 +3,11 @@ import "./Button.scss";
 
 export interface ButtonProps {
     label: string;
+    color?: string;
 }
 
 const Button = (props: ButtonProps) => {
-    return <button className={"main-button"}>{props.label}</button>;
+    return <button style={{backgroundColor: props.color}} className={"main-button"}>{props.label}</button>;
 };
 
 export default Button;
