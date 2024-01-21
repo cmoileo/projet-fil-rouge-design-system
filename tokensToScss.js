@@ -15,6 +15,18 @@ color: $${purple};
         scss += `.${purple}_bg {
 background-color: $${purple};
 };\n`
+        scss += `.${purple}_bg_hover:hover {
+background-color: $${purple};
+};\n`
+        scss += `.${purple}_border {
+border-color: $${purple};
+};\n`
+        scss += `.${purple}_border_hover:hover {
+border-color: $${purple};
+};\n`
+        scss += `.${purple}_hover:hover {
+color: $${purple};
+};\n`
     })
 
     const blues = tokens['Colors/Mode 1']['Blues']
@@ -26,6 +38,18 @@ color: $${blue};
 };\n`
         scss += `.${blue}_bg {
 background-color: $${blue};
+};\n`
+        scss += `.${blue}_bg_hover:hover {
+background-color: $${blue};
+};\n`
+        scss += `.${blue}_border {
+border-color: $${blue};
+};\n`
+        scss += `.${blue}_border_hover:hover {
+border-color: $${blue};
+};\n`
+        scss += `.${blue}_hover:hover {
+color: $${blue};
 };\n`
     })
 
@@ -39,6 +63,18 @@ color: $${green};
         scss += `.${green}_bg {
 background-color: $${green};
 };\n`
+        scss += `.${green}_bg_hover:hover {
+background-color: $${green};
+};\n`
+        scss += `.${green}_border {
+border-color: $${green};
+};\n`
+        scss += `.${green}_border_hover:hover {
+border-color: $${green};
+};\n`
+        scss += `.${green}_hover:hover {
+color: $${green};
+};\n`
     })
 
     const greys = tokens['Colors/Mode 1']['Greys']
@@ -50,6 +86,18 @@ color: $${grey};
 };\n`
         scss += `.${grey}_bg {
 background-color: $${grey};
+};\n`
+        scss += `.${grey}_bg_hover:hover {
+background-color: $${grey};
+};\n`
+        scss += `.${grey}_border {
+border-color: $${grey};
+};\n`
+        scss += `.${grey}_border_hover:hover {
+border-color: $${grey};
+};\n`
+        scss += `.${grey}_hover:hover {
+color: $${grey};
 };\n`
     })
 
@@ -73,6 +121,14 @@ padding-top: $desktop_${pad};
         scss += `.desktop_${pad}_bottom {
 padding-bottom: $desktop_${pad};
 };\n`
+        scss += `.desktop_${pad}_horizontal {
+padding-left: $desktop_${pad};
+padding-right: $desktop_${pad};
+};\n`
+        scss += `.desktop_${pad}_vertical {
+padding-top: $desktop_${pad};
+padding-bottom: $desktop_${pad};
+};\n`
     })
 
     const margin = desktopSpacing['Margin']
@@ -81,6 +137,26 @@ padding-bottom: $desktop_${pad};
         scss += `$desktop_${marg}: ${margin[marg].value};\n`
         scss += `.desktop_${marg} {
 margin: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_right {
+margin-right: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_left {
+margin-left: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_top {
+margin-top: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_bottom {
+margin-bottom: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_horizontal {
+margin-left: $desktop_${marg};
+margin-right: $desktop_${marg};
+};\n`
+        scss += `.desktop_${marg}_vertical {
+margin-top: $desktop_${marg};
+margin-bottom: $desktop_${marg};
 };\n`
     })
 
@@ -113,6 +189,14 @@ padding-top: $tablet_${pad};
         scss += `.tablet_${pad}_bottom {
 padding-bottom: $tablet_${pad};
 };\n`
+        scss += `.tablet_${pad}_horizontal {
+padding-left: $tablet_${pad};
+padding-right: $tablet_${pad};
+};\n`
+        scss += `.tablet_${pad}_vertical {
+padding-top: $tablet_${pad};
+padding-bottom: $tablet_${pad};
+};\n`
     })
 
     const tabletMargin = tabletSpacing['Margin']
@@ -121,6 +205,26 @@ padding-bottom: $tablet_${pad};
         scss += `$tablet_${marg}: ${tabletMargin[marg].value};\n`
         scss += `.tablet_${marg} {
 margin: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_right {
+margin-right: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_left {
+margin-left: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_top {
+margin-top: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_bottom {
+margin-bottom: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_horizontal {
+margin-left: $tablet_${marg};
+margin-right: $tablet_${marg};
+};\n`
+        scss += `.tablet_${marg}_vertical {
+margin-top: $tablet_${marg};
+margin-bottom: $tablet_${marg};
 };\n`
     })
 
@@ -153,6 +257,14 @@ padding-top: $mobile_${pad};
         scss += `.mobile_${pad}_bottom {
 padding-bottom: $mobile_${pad};
 };\n`
+        scss += `.mobile_${pad}_horizontal {
+padding-left: $mobile_${pad};
+padding-right: $mobile_${pad};
+};\n`
+        scss += `.mobile_${pad}_vertical {
+padding-top: $mobile_${pad};
+padding-bottom: $mobile_${pad};
+};\n`
     })
 
     const mobileMargin = mobileSpacing['Margin']
@@ -172,6 +284,14 @@ margin-left: $mobile_${marg};
 margin-top: $mobile_${marg};
 };\n`
         scss += `.mobile_${marg}_bottom {
+margin-bottom: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_horizontal {
+margin-left: $mobile_${marg};
+margin-right: $mobile_${marg};
+};\n`
+        scss += `.mobile_${marg}_vertical {
+margin-top: $mobile_${marg};
 margin-bottom: $mobile_${marg};
 };\n`
     })

@@ -13,7 +13,6 @@ export const Primary = Template.bind({});
 Primary.args = {
     primary: true,
     label: 'Button test',
-    style: {
-        backgroundColor: 'green_600_bg'
-    }
+    style: {},
+    size: 'XL'
 }

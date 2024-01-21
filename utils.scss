@@ -10,3 +10,21 @@
 .pointer {
   cursor: pointer;
 }
+.transition_1 {
+  transition: all 0.1s ease-in-out;
+}
+.transparent_bg_hover:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.border_width_100 {
+  border-width: 1px;
+  border-style: solid;
+}
+.border_width_200 {
+  border-width: 2px;
+  border-style: solid;
+}
+.border_width_300 {
+  border-width: 2px;
+  border-style: solid;
+}

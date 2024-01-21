@@ -2,37 +2,33 @@ import React from "react";
 import "../../../variables.scss"
 import "../../../utils.scss"
 import PropTypes from "prop-types";
+import {Style} from "../../types";
+import {Sizes} from "../../types";
 
-export interface Style {
-    backgroundColor?: string;
-    color?: string;
-    fontSize?: string;
-    fontWeight?: string;
-    border?: string;
-    radius?: string;
-    padding?: string;
-    margin?: string;
-    width?: string;
-    height?: string;
-    display?: string;
-    justifyContent?: string;
-    alignItems?: string;
-    flexDirection?: string;
-    flexWrap?: string;
-    boxShadow?: string;
-    [key: string]: string | undefined;
-}
 export interface argsTypes {
     label: string;
     style: Style;
     handleClick?: () => void;
+    size?: Sizes;
 }
 
 const Button = (props: argsTypes) => {
     const style: Style = {
+        className: props.style.className ? props.style.className : "",
         backgroundColor: props.style.backgroundColor ? props.style.backgroundColor : "blue_600_bg",
         radius: props.style.radius ? props.style.radius : "desktop_radius_100",
         color: props.style.color ? props.style.color : "white",
+        paddingHorizontal: props.style.paddingHorizontal ? props.style.paddingHorizontal : "desktop_padding_400_horizontal",
+        paddingVertical: props.style.paddingVertical ? props.style.paddingVertical : "desktop_padding_100_vertical",
+        cursor: props.style.cursor ? props.style.cursor : "pointer",
+        border: props.style.border ? props.style.border : "border_none",
+        typo: props.size ? `paragraph_${props.size}` : "paragraph_XL",
+        transition: props.style.transition ? props.style.transition : "transition_1",
+        hoverBgColor: props.style.hoverColor ? props.style.hoverColor : "transparent_bg_hover",
+        hoverColor: props.style.hoverColor ? props.style.hoverColor : "blue_600_hover",
+        borderColor: props.style.borderColor ? props.style.borderColor : "blue_600_border",
+        hoverBorderColor: props.style.hoverBorderColor ? props.style.hoverBorderColor : "blue_600_border_hover",
+        borderWith: props.style.borderWith ? props.style.borderWith : "border_width_200",
     }
 
     const stringStyle = Object.keys(style).map((key: string) => {
@@ -59,7 +55,8 @@ const Button = (props: argsTypes) => {
 Button.propTypes = {
     label: PropTypes.string.isRequired,
     style: PropTypes.object,
-    handleClick: PropTypes.func
+    handleClick: PropTypes.func,
+    size: Sizes,
 }
 
 export default Button;
