@@ -1,12 +1,12 @@
-import SecondaryButton from "../components/SecondaryButton/SecondaryButton";
+import FilterPill from "../components/FilterPill/FilterPill";
 
 export default {
-    title: 'Example/SecondaryButton',
-    component: SecondaryButton,
+    title: 'Example/FilterPill',
+    component: FilterPill,
     argTypes: { handleClick: { action: 'clicked' }},
 }
 
-const Template = (props) => <SecondaryButton {...props} />;
+const Template = (props) => <FilterPill {...props} />;
 
 export const Primary = Template.bind({});
 
