@@ -12,7 +12,7 @@ export interface argsTypes {
     size?: Sizes;
 }
 
-const Button = (props: argsTypes) => {
+const MainButton = (props: argsTypes) => {
     const style: Style = {
         className: props.style.className ? props.style.className : "",
         backgroundColor: props.style.backgroundColor ? props.style.backgroundColor : "blue_600_bg",
@@ -52,11 +52,11 @@ const Button = (props: argsTypes) => {
     );
 };
 
-Button.propTypes = {
+MainButton.propTypes = {
     label: PropTypes.string.isRequired,
     style: PropTypes.object,
     handleClick: PropTypes.func,
     size: Sizes,
 }
 
-export default Button;
+export default MainButton;

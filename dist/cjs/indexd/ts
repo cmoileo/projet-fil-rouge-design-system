@@ -1,8 +1,8 @@
 'use strict';
 
-const Button = (props) => {
+const MainButton = (props) => {
     return (React.createElement("button", null, props.label));
 };
 
-exports.Button = Button;
+exports.MainButton = MainButton;
 //# sourceMappingURL=ts.map

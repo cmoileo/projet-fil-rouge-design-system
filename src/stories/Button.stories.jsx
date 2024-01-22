@@ -1,18 +1,18 @@
-import  Button  from "../components/Button/Button";
+import  MainButton  from "../components/MainButton/MainButton";
 
 export default {
-    title: 'Example/Button',
-    component: Button,
+    title: 'Example/MainButton',
+    component: MainButton,
     argTypes: { handleClick: { action: 'clicked' }},
 }
 
-const Template = (props) => <Button {...props} />;
+const Template = (props) => <MainButton {...props} />;
 
 export const Primary = Template.bind({});
 
 Primary.args = {
     primary: true,
-    label: 'Button test',
+    label: 'MainButton test',
     style: {},
     size: 'XL'
 }

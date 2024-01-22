@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
 
-import Button from "./Button";
+import MainButton from "./MainButton";
 
-describe("Button", () => {
+describe("MainButton", () => {
   it("should render successfully", () => {
-    render(<Button label="Hello World" />);
+    render(<MainButton style={{}} label="Hello World" />);
   });
 });
