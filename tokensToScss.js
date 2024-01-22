@@ -352,7 +352,6 @@ border-radius: $mobile_${border};
         const typoLineHeight = `typo_line_${typoValue['lineHeight'].replace(/[{}]/g, '').split('.')[1]}`
         const typoSize = `typo_size_${typoValue['fontSize'].replace(/[{}]/g, '').split('.')[1]}`
         const typoLetterSpacing = `typo_letter_${typoValue['letterSpacing'].replace(/[{}]/g, '').split('.')[1]}`
-        const typoParagraphSpacing = `typo_para_${typoValue['paragraphSpacing'].replace(/[{}]/g, '').split('.')[1]}`
 
         scss += `.${typoName} {
 font-family: $${typoFontFamily};
@@ -373,7 +372,6 @@ letter-spacing: $${typoLetterSpacing};
         const typoLineHeight = `typo_line_${typoValue['lineHeight'].replace(/[{}]/g, '').split('.')[1]}`
         const typoSize = `typo_size_${typoValue['fontSize'].replace(/[{}]/g, '').split('.')[1]}`
         const typoLetterSpacing = `typo_letter_${typoValue['letterSpacing'].replace(/[{}]/g, '').split('.')[1]}`
-        const typoParagraphSpacing = `typo_para_${typoValue['paragraphSpacing'].replace(/[{}]/g, '').split('.')[1]}`
 
         scss += `.${typoName} {
 font-family: $${typoFontFamily};
