@@ -1,9 +1,9 @@
 import React from "react";
-import "../../../variables.scss"
-import "../../../utils.scss"
 import PropTypes from "prop-types";
 import {Style} from "../../types";
 import {Sizes} from "../../types";
+import "../../../variables.scss"
+import "../../../utils.scss"
 
 export interface argsTypes {
     label: string;
@@ -16,10 +16,10 @@ const MainButton = (props: argsTypes) => {
     const style: Style = {
         className: props.style.className ? props.style.className : "",
         backgroundColor: props.style.backgroundColor ? props.style.backgroundColor : "blue_600_bg",
-        radius: props.style.radius ? props.style.radius : "desktop_radius_100",
+        radius: props.style.radius ? props.style.radius : "radius_100",
         color: props.style.color ? props.style.color : "white",
-        paddingHorizontal: props.style.paddingHorizontal ? props.style.paddingHorizontal : "desktop_padding_400_horizontal",
-        paddingVertical: props.style.paddingVertical ? props.style.paddingVertical : "desktop_padding_100_vertical",
+        paddingHorizontal: props.style.paddingHorizontal ? props.style.paddingHorizontal : "padding_400_horizontal",
+        paddingVertical: props.style.paddingVertical ? props.style.paddingVertical : "padding_100_vertical",
         cursor: props.style.cursor ? props.style.cursor : "pointer",
         border: props.style.border ? props.style.border : "border_none",
         typo: props.size ? `paragraph_${props.size}` : "paragraph_XL",

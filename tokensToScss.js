@@ -5,6 +5,11 @@ const tokens = JSON.parse(jsonFile);
 
 const tokensToScss = (tokens) => {
     let scss = '';
+
+    ////////////////////////////////////////////////////////////////
+    //////////////////////////// COLORS ////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
     const purples = tokens['Colors/Mode 1']['Purples']
 
     Object.keys(purples).map((purple) => {
@@ -101,33 +106,54 @@ color: $${grey};
 };\n`
     })
 
+
+
+    ////////////////////////////////////////////////////////////////
+    //////////////////////////// SPACING ///////////////////////////
+    ////////////////////////////////////////////////////////////////
+
+
     const desktopSpacing = tokens['Spacing/Desktop']
     const padding = desktopSpacing['Padding']
 
     Object.keys(padding).map((pad) => {
         scss += `$desktop_${pad}: ${padding[pad].value};\n`
-        scss += `.desktop_${pad} {
-padding: $desktop_${pad};
+        scss += `.${pad} {
+    @media (min-width: 1024px) {
+        padding: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_right {
-padding-right: $desktop_${pad};
+        scss += `.${pad}_right {
+    @media (min-width: 1024px) {
+        padding-right: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_left {
-padding-left: $desktop_${pad};
+        scss += `.${pad}_left {
+    @media (min-width: 1024px) {
+        padding-left: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_top {
-padding-top: $desktop_${pad};
+        scss += `.${pad}_top {
+    @media (min-width: 1024px) {
+        padding-top: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_bottom {
-padding-bottom: $desktop_${pad};
+        scss += `.${pad}_bottom {
+    @media (min-width: 1024px) {
+        padding-bottom: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_horizontal {
-padding-left: $desktop_${pad};
-padding-right: $desktop_${pad};
+        scss += `.${pad}_horizontal {
+    @media (min-width: 1024px) {
+        padding-left: $desktop_${pad};
+        padding-right: $desktop_${pad};
+    }
 };\n`
-        scss += `.desktop_${pad}_vertical {
-padding-top: $desktop_${pad};
-padding-bottom: $desktop_${pad};
+        scss += `.${pad}_vertical {
+    @media (min-width: 1024px) {
+        padding-top: $desktop_${pad};
+        padding-bottom: $desktop_${pad};
+    }
 };\n`
     })
 
@@ -135,28 +161,42 @@ padding-bottom: $desktop_${pad};
 
     Object.keys(margin).map((marg) => {
         scss += `$desktop_${marg}: ${margin[marg].value};\n`
-        scss += `.desktop_${marg} {
-margin: $desktop_${marg};
+        scss += `.${marg} {
+    @media (min-width: 1024px) {
+        margin: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_right {
-margin-right: $desktop_${marg};
+        scss += `.${marg}_right {
+    @media (min-width: 1024px) {
+        margin-right: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_left {
-margin-left: $desktop_${marg};
+        scss += `.${marg}_left {
+    @media (min-width: 1024px) {
+        margin-left: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_top {
-margin-top: $desktop_${marg};
+        scss += `.${marg}_top {
+    @media (min-width: 1024px) {
+        margin-top: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_bottom {
-margin-bottom: $desktop_${marg};
+        scss += `.${marg}_bottom {
+    @media (min-width: 1024px) {
+        margin-bottom: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_horizontal {
-margin-left: $desktop_${marg};
-margin-right: $desktop_${marg};
+        scss += `.${marg}_horizontal {
+    @media (min-width: 1024px) {
+        margin-left: $desktop_${marg};
+        margin-right: $desktop_${marg};
+    }
 };\n`
-        scss += `.desktop_${marg}_vertical {
-margin-top: $desktop_${marg};
-margin-bottom: $desktop_${marg};
+        scss += `.${marg}_vertical {
+    @media (min-width: 1024px) {
+        margin-top: $desktop_${marg};
+        margin-bottom: $desktop_${marg};
+    }
 };\n`
     })
 
@@ -164,8 +204,10 @@ margin-bottom: $desktop_${marg};
 
     Object.keys(borderRadius).map((border) => {
         scss += `$desktop_${border}: ${borderRadius[border].value};\n`
-        scss += `.desktop_${border} {
-border-radius: $desktop_${border};
+        scss += `.${border} {
+    @media (min-width: 1024px) {
+        border-radius: $desktop_${border};
+    }
 };\n`
     })
 
@@ -174,28 +216,42 @@ border-radius: $desktop_${border};
 
     Object.keys(tabletPadding).map((pad) => {
         scss += `$tablet_${pad}: ${tabletPadding[pad].value};\n`
-        scss += `.tablet_${pad} {
-padding: $tablet_${pad};
+        scss += `.${pad} {
+    @media (max-width: 1023px) {
+        padding: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_right {
-padding-right: $tablet_${pad};
+        scss += `.${pad}_right {
+    @media (max-width: 1023px) {
+        padding-right: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_left {
-padding-left: $tablet_${pad};
+        scss += `.${pad}_left {
+    @media (max-width: 1023px) {
+        padding-left: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_top {
-padding-top: $tablet_${pad};
+        scss += `.${pad}_top {
+    @media (max-width: 1023px) {
+        padding-top: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_bottom {
-padding-bottom: $tablet_${pad};
+        scss += `.${pad}_bottom {
+    @media (max-width: 1023px) {
+        padding-bottom: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_horizontal {
-padding-left: $tablet_${pad};
-padding-right: $tablet_${pad};
+        scss += `.${pad}_horizontal {
+    @media (max-width: 1023px) {
+        padding-left: $tablet_${pad};
+        padding-right: $tablet_${pad};
+    }
 };\n`
-        scss += `.tablet_${pad}_vertical {
-padding-top: $tablet_${pad};
-padding-bottom: $tablet_${pad};
+        scss += `.${pad}_vertical {
+    @media (max-width: 1023px) {
+        padding-top: $tablet_${pad};
+        padding-bottom: $tablet_${pad};
+    }
 };\n`
     })
 
@@ -203,28 +259,42 @@ padding-bottom: $tablet_${pad};
 
     Object.keys(tabletMargin).map((marg) => {
         scss += `$tablet_${marg}: ${tabletMargin[marg].value};\n`
-        scss += `.tablet_${marg} {
-margin: $tablet_${marg};
+        scss += `.${marg} {
+    @media (max-width: 1023px) {
+        margin: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_right {
-margin-right: $tablet_${marg};
+        scss += `.${marg}_right {
+    @media (max-width: 1023px) {
+        margin-right: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_left {
-margin-left: $tablet_${marg};
+        scss += `.${marg}_left {
+    @media (max-width: 1023px) {
+        margin-left: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_top {
-margin-top: $tablet_${marg};
+        scss += `.${marg}_top {
+    @media (max-width: 1023px) {
+        margin-top: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_bottom {
-margin-bottom: $tablet_${marg};
+        scss += `.${marg}_bottom {
+    @media (max-width: 1023px) {
+        margin-bottom: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_horizontal {
-margin-left: $tablet_${marg};
-margin-right: $tablet_${marg};
+        scss += `.${marg}_horizontal {
+    @media (max-width: 1023px) {
+        margin-left: $tablet_${marg};
+        margin-right: $tablet_${marg};
+    }
 };\n`
-        scss += `.tablet_${marg}_vertical {
-margin-top: $tablet_${marg};
-margin-bottom: $tablet_${marg};
+        scss += `.${marg}_vertical {
+    @media (max-width: 1023px) {
+        margin-top: $tablet_${marg};
+        margin-bottom: $tablet_${marg};
+    }
 };\n`
     })
 
@@ -232,8 +302,10 @@ margin-bottom: $tablet_${marg};
 
     Object.keys(tabletBorderRadius).map((border) => {
         scss += `$tablet_${border}: ${tabletBorderRadius[border].value};\n`
-        scss += `.tablet_${border} {
-border-radius: $tablet_${border};
+        scss += `.${border} {
+    @media (max-width: 1023px) {
+        border-radius: $tablet_${border};
+    }
 };\n`
     })
 
@@ -242,28 +314,42 @@ border-radius: $tablet_${border};
 
     Object.keys(mobilePadding).map((pad) => {
         scss += `$mobile_${pad}: ${mobilePadding[pad].value};\n`
-        scss += `.mobile_${pad} {
-padding: $mobile_${pad};
+        scss += `.${pad} {
+    @media (max-width: 768px) {
+        padding: $mobile_${pad};
+    }
 };\n`
-        scss += `.mobile_${pad}_right {
-padding-right: $mobile_${pad};
+        scss += `.${pad}_right {
+    @media (max-width: 768px) {
+        padding-right: $mobile_${pad};
+    }
 };\n`
-        scss += `.mobile_${pad}_left {
-padding-left: $mobile_${pad};
+        scss += `.${pad}_left {
+    @media (max-width: 768px) {
+        padding-left: $mobile_${pad};
+    }
 };\n`
-        scss += `.mobile_${pad}_top {
-padding-top: $mobile_${pad};
+        scss += `.${pad}_top {
+    @media (max-width: 768px) {
+        padding-top: $mobile_${pad};
+    }
 };\n`
-        scss += `.mobile_${pad}_bottom {
-padding-bottom: $mobile_${pad};
+        scss += `.${pad}_bottom {
+    @media (max-width: 768px) {
+        padding-bottom: $mobile_${pad};
+    }
 };\n`
-        scss += `.mobile_${pad}_horizontal {
-padding-left: $mobile_${pad};
-padding-right: $mobile_${pad};
+        scss += `.${pad}_horizontal {
+    @media (max-width: 768px) {
+    padding-left: $mobile_${pad};
+    padding-right: $mobile_${pad};
+    };
 };\n`
-        scss += `.mobile_${pad}_vertical {
-padding-top: $mobile_${pad};
-padding-bottom: $mobile_${pad};
+        scss += `.${pad}_vertical {
+    @media (max-width: 768px) {
+        padding-top: $mobile_${pad};
+        padding-bottom: $mobile_${pad};
+    };
 };\n`
     })
 
@@ -271,28 +357,42 @@ padding-bottom: $mobile_${pad};
 
     Object.keys(mobileMargin).map((marg) => {
         scss += `$mobile_${marg}: ${mobileMargin[marg].value};\n`
-        scss += `.mobile_${marg} {
-margin: $mobile_${marg};
+        scss += `.${marg} {
+    @media (max-width: 768px) {
+        margin: $mobile_${marg};
+    }
 };\n`
-        scss += `.mobile_${marg}_right {
-margin-right: $mobile_${marg};
+        scss += `.${marg}_right {
+    @media (max-width: 768px) {
+        margin-right: $mobile_${marg};
+    }
 };\n`
-        scss += `.mobile_${marg}_left {
-margin-left: $mobile_${marg};
+        scss += `.${marg}_left {
+    @media (max-width: 768px) {
+        margin-left: $mobile_${marg};
+    }
 };\n`
-        scss += `.mobile_${marg}_top {
-margin-top: $mobile_${marg};
+        scss += `.${marg}_top {
+    @media (max-width: 768px) {
+        margin-top: $mobile_${marg};
+    };
 };\n`
-        scss += `.mobile_${marg}_bottom {
-margin-bottom: $mobile_${marg};
+        scss += `.${marg}_bottom {
+    @media (max-width: 768px) {
+        margin-bottom: $mobile_${marg};
+    };
 };\n`
-        scss += `.mobile_${marg}_horizontal {
-margin-left: $mobile_${marg};
-margin-right: $mobile_${marg};
+        scss += `.${marg}_horizontal {
+    @media (max-width: 768px) {
+        margin-left: $mobile_${marg};
+        margin-right: $mobile_${marg};
+    };
 };\n`
-        scss += `.mobile_${marg}_vertical {
-margin-top: $mobile_${marg};
-margin-bottom: $mobile_${marg};
+        scss += `.${marg}_vertical {
+    @media (max-width: 768px) {
+        margin-top: $mobile_${marg};
+        margin-bottom: $mobile_${marg};
+    };
 };\n`
     })
 
@@ -300,10 +400,18 @@ margin-bottom: $mobile_${marg};
 
     Object.keys(mobileBorderRadius).map((border) => {
         scss += `$mobile_${border}: ${mobileBorderRadius[border].value};\n`
-        scss += `.mobile_${border} {
-border-radius: $mobile_${border};
+        scss += `.${border} {
+    @media (max-width: 768px) {
+        border-radius: $mobile_${border};
+    }
 };\n`
     })
+
+
+    ////////////////////////////////////////////////////////////////
+    //////////////////////////// TYPO //////////////////////////////
+    ////////////////////////////////////////////////////////////////
+
 
     const typos = tokens['Typos']
     const fontSizes = typos['fontSize']
