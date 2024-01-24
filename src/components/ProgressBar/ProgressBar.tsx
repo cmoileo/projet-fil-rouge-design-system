@@ -4,6 +4,7 @@ import { Style } from "../../types";
 import { Sizes } from "../../types";
 import "../../../variables.scss";
 import "../../../utils.scss";
+import "./ProgressBar.scss";
 
 
 export interface argsTypes {
@@ -14,7 +15,8 @@ export interface argsTypes {
 
 const ProgressBar = (props: argsTypes) => {
     const style: Style = {
-
+        className: props.style.className ? props.style.className : "progress-bar_c",
+        typo: props.style.typo ? props.style.typo : "paragraph_M",
     }
 
     const stringStyle = Object.keys(style).map((key: string) => {
@@ -32,9 +34,8 @@ const ProgressBar = (props: argsTypes) => {
             onClick={handleClick}
             className={stringStyle}
         >
-            <p>
-                {props.pt}
-            </p>
+            {props.pt}%
+            <div className="bar"></div>
         </div>
     );
 };

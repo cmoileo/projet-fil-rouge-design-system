@@ -1,0 +1,20 @@
+@import '../../../variables.scss';
+
+.progress-bar_c {
+  display: flex;
+  align-items: center;
+  gap: $gap_100;
+  .bar {
+    height: 4px;
+    //border-radius: $radius_100;
+    //background-color: $grey_100;
+    ::after {
+      content: '';
+      display: block;
+      height: 100%;
+      //border-radius: $radius_100;
+      //background-color: $green_400;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+}

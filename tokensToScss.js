@@ -211,6 +211,17 @@ color: $${grey};
 };\n`
     })
 
+    const gap = desktopSpacing['Gap']
+
+    Object.keys(gap).map((g) => {
+        scss += `$desktop_${g}: ${gap[g].value};\n`
+        scss += `.${g} {
+    @media (min-width: 1024px) {
+        gap: $desktop_${g};
+    }
+};\n`
+    })
+
     const tabletSpacing = tokens['Spacing/Tablet']
     const tabletPadding = tabletSpacing['Padding']
 
@@ -309,6 +320,17 @@ color: $${grey};
 };\n`
     })
 
+    const tabletGap = tabletSpacing['Gap']
+
+    Object.keys(tabletGap).map((g) => {
+        scss += `$tablet_${g}: ${tabletGap[g].value};\n`
+        scss += `.${g} {
+    @media (max-width: 1023px) {
+        gap: $tablet_${g};
+    }
+};\n`
+    })
+
     const mobileSpacing = tokens['Spacing/Mobile']
     const mobilePadding = mobileSpacing['Padding']
 
@@ -403,6 +425,17 @@ color: $${grey};
         scss += `.${border} {
     @media (max-width: 768px) {
         border-radius: $mobile_${border};
+    }
+};\n`
+    })
+
+    const mobileGap = mobileSpacing['Gap']
+
+    Object.keys(mobileGap).map((g) => {
+        scss += `$mobile_${g}: ${mobileGap[g].value};\n`
+        scss += `.${g} {
+    @media (max-width: 768px) {
+        gap: $mobile_${g};
     }
 };\n`
     })
